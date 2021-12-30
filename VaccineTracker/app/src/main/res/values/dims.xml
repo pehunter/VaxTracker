@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardCornerRadius">10dp</dimen>
+    <dimen name="cardPaddingRadius">8dp</dimen>
+    <dimen name="cardSeparationDist">14dp</dimen>
+    <dimen name="subtextSize">14dp</dimen>
+    <dimen name="subGraphSize">200dp</dimen>
+    <dimen name="mainGraphSize">250dp</dimen>
+</resources>

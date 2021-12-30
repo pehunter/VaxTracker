@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.patrick.vaccinetracker.LeaderboardActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leaderboard_spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="55dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/leaderboard_searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/leaderboard_spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="9.5dp">
+
+            <ImageButton
+                android:id="@+id/leaderboard_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/homeAsUpIndicator"
+                android:backgroundTint="?attr/colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/leaderboard_optionSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="48dp"
+                android:background="@drawable/roundedrect"
+                android:entries="@array/leaderboardOptions"
+                android:padding="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/leaderboard_backButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/leaderboard_cardList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboard_searchContainer">
+
+        <LinearLayout
+            android:id="@+id/leaderboard_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <include
+                android:id="@+id/leaderboard_card0"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card1"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card2"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card3"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card4"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card5"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card6"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card7"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card8"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card9"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card10"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card11"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card12"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card13"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card14"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card15"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card16"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card17"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card18"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card19"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card20"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card21"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card22"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card23"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card24"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card25"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card26"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card27"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card28"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card29"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card30"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card31"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card32"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card33"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card34"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card35"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card36"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card37"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card38"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card39"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card40"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card41"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card42"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card43"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card44"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card45"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card46"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card47"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card48"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card49"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card50"
+                layout="@layout/item_leaderentry" />
+
+            <include
+                android:id="@+id/leaderboard_card51"
+                layout="@layout/item_leaderentry" />
+
+
+            <!--<androidx.cardview.widget.CardView
+                android:id="@+id/leaderboard_card"
+                style="@style/card"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/leaderboard_spacer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+                    />
+
+                    <TextView
+                        android:id="@+id/leaderboard_rank"
+                        style="@style/bigText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="52"
+                        android:textColor="?attr/titleTextColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/leaderboard_spacer"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/leaderboard_stateName"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="District Of Columbia"
+                        app:layout_constraintStart_toStartOf="@+id/leaderboard_spacer"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/leaderboard_viewDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Details"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>-->
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

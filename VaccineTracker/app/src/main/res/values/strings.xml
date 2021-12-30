@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Vaccine Tracker</string>
+    <string name="vax_total">Total vaccines administered</string>
+    <string name="fVax">People\nfully vaccinated</string>
+    <string name="dose">People with\none dose</string>
+    <string name="boost">People with\na booster shot</string>
+    <string name="vaxBarChart">Vaccines administered in %s</string>
+    <string name="tVaxTitle">Overview</string>
+    <string name="vaxDistTitle">Distribution of people vaccinated</string>
+    <string name="otherTitle">Other</string>
+    <string name="ACHint">Enter a name</string>
+    <string name="floatingButton">View Details</string>
+    <string name="disclaimer">Data last updated %s.</string>
+    <string-array name="mapOptions">
+        <item>Single Dose</item>
+        <item>Fully Vaccinated</item>
+        <item>Booster Shot</item>
+    </string-array>
+
+    <string-array name="leaderboardOptions">
+        <item>Single Dose, percent</item>
+        <item>Single Dose, number</item>
+        <item>Fully Vaccinated, percent</item>
+        <item>Fully Vaccinated, number</item>
+        <item>Booster Shot, percent</item>
+        <item>Booster Shot, number</item>
+        <item>Total Doses Administered</item>
+    </string-array>
+</resources>

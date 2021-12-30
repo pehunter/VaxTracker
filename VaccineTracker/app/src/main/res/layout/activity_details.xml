@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/details_spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="55dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/details_spacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12.5dp">
+
+            <ImageButton
+                android:id="@+id/details_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/homeAsUpIndicator"
+                android:backgroundTint="?attr/colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/details_stateName"
+                style="@style/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:padding="0dp"
+                android:text="State Name"
+                android:textColor="?attr/colorOnPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/details_backButton"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/details_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_toolbar"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/details_cardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_totalVaxStats"
+                style="@style/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/details_totalVax_Constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/details_tVax_title"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tVaxTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/details_totalVax_Chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mainGraphSize"
+                        android:padding="@dimen/cardPaddingRadius"
+                        app:layout_constraintBottom_toTopOf="@+id/details_fullyVaxDesc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_tVax_title" />
+
+                    <TextView
+                        android:id="@+id/details_fullyVaxDesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/cardPaddingRadius"
+                        android:text="@string/fVax"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_numVaxDist"
+                style="@style/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/details_numVax_Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vaxDistTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/details_vaxDistChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/mainGraphSize"
+                        app:layout_constraintBottom_toTopOf="@+id/details_barGraphDesc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/details_barGraphDesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/cardPaddingRadius"
+                        android:text="@string/vaxBarChart"
+                        app:layout_constraintBottom_toTopOf="@+id/details_graphDivider1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/details_graphDivider1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.55" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/details_graphDivider2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/details_graphDivider3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.80" />
+
+                    <TextView
+                        android:id="@+id/details_numSingleDose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1,989"
+                        android:textAppearance="@style/bigText"
+                        android:textColor="@color/dose"
+                        app:layout_constraintEnd_toStartOf="@+id/details_graphDivider2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/details_graphDivider1" />
+
+                    <TextView
+                        android:id="@+id/details_numDosesdesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dose"
+                        app:layout_constraintEnd_toStartOf="@+id/details_graphDivider2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_numSingleDose" />
+
+                    <TextView
+                        android:id="@+id/details_numFVax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1999"
+                        android:textAppearance="@style/bigText"
+                        android:textColor="@color/both"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/details_graphDivider2"
+                        app:layout_constraintTop_toTopOf="@+id/details_graphDivider1" />
+
+                    <TextView
+                        android:id="@+id/details_numFVaxdesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fVax"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/details_graphDivider2"
+                        app:layout_constraintTop_toBottomOf="@+id/details_numFVax" />
+
+                    <TextView
+                        android:id="@+id/details_numBooster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2099"
+                        android:textAppearance="@style/bigText"
+                        android:textColor="@color/boost"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/details_graphDivider3" />
+
+                    <TextView
+                        android:id="@+id/details_boostDesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boost"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_numBooster" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_percentsAndDist"
+                style="@style/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/details_layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/otherTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/details_numTotal"
+                        style="@style/bigText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3030"
+                        android:textColor="@color/purple_200"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_boostPctDesc" />
+
+                    <TextView
+                        android:id="@+id/details_boostPctDesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boost"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/details_graphDivider4"
+                        app:layout_constraintTop_toBottomOf="@+id/details_boostPct" />
+
+                    <TextView
+                        android:id="@+id/details_dosePctDesc"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dose"
+                        app:layout_constraintEnd_toStartOf="@+id/details_graphDivider4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_firstDosePct" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/details_graphDivider4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/details_firstDosePct"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/subGraphSize"
+                        android:padding="@dimen/cardPaddingRadius"
+                        app:layout_constraintEnd_toStartOf="@+id/details_graphDivider4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3"></com.github.mikephil.charting.charts.PieChart>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/details_boostPct"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/subGraphSize"
+                        android:padding="@dimen/cardPaddingRadius"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/details_graphDivider4"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3"></com.github.mikephil.charting.charts.PieChart>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        style="@style/subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vax_total"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/details_numTotal" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/details_asOf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/disclaimer"
+                android:textAppearance="@style/subText"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="subText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?colorOnSecondary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/cardPaddingRadius</item>
+    </style>
+
+    <style name="title" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?colorOnSecondary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="bigText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">?colorOnSecondary</item>
+    </style>
+
+    <style name="card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/cardCornerRadius</item>
+        <item name="cardBackgroundColor">?colorSecondary</item>
+        <item name="android:layout_marginTop">@dimen/cardSeparationDist</item>
+    </style>
+
+    <style name="floatingButton" parent="Widget.MaterialComponents.Button">
+        <!--<item name="android:backgroundTint">@color/offwhite</item
+        <item name="android:textAppearance">@style/buttonText</item>
+        <item name="android:textColor">@color/black</item>>-->
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:drawable">@drawable/topcornersround</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="transButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <!--<item name="android:backgroundTint">@color/offwhite</item
+        <item name="android:textAppearance">@style/buttonText</item>
+        <item name="android:textColor">@color/black</item>>-->
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:drawable">@drawable/topcornersround</item>
+        <item name="android:backgroundTint">#00000000</item>
+    </style>
+
+    <style name="imgButton" parent="Widget.AppCompat.ImageButton">
+        <!--<item name="android:backgroundTint">@color/offwhite</item
+        <item name="android:textAppearance">@style/buttonText</item>
+        <item name="android:textColor">@color/black</item>>-->
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:drawable">@drawable/topcornersround</item>
+    </style>
+
+    <style name="buttonText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#474747</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/cardPaddingRadius</item>
+    </style>
+</resources>

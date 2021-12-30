@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#5900DA</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="blue_200">#FF86C4FD</color>
+    <color name="blue_500">#FF007BEE</color>
+    <color name="blue_700">#FF005DB3</color>
+    <color name="dose">#FF52C9</color>
+    <color name="both">#5297FF</color>
+    <color name="boost">#6CFF52</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="offblack">#424242</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="offwhite">#D7D7D7</color>
+    <color name="gold">#C9B037</color>
+    <color name="silver">#EFEFEF</color>
+    <color name="bronze">#AD8A56</color>
+    <color name="goldNight">#a08d2c</color>
+    <color name="silverNight">#999999</color>
+    <color name="bronzeNight">#8a6d42</color>
+</resources>
